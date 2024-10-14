@@ -51,14 +51,14 @@
 -   **ESLint**（插件名：`dbaeumer.vscode-eslint`）
 
 -   **Vue Language Features (Volar)**（插件名：`Vue.volar`）
+-   **Stylelint**（插件名：`stylelint.vscode-stylelint`）
 
--   **TypeScript Vue Plugin (Volar)**（插件名：`Vue.vscode-typescript-vue-plugin`）
 
 如果你有曾安装过 **Vetur**，请先禁用，否则可能与 **Volar** 存在潜在的冲突。
 
 ### 配置 VSCode
 
-使用 `vue-cli` 脚手架初始化项目后，将本项目根目录下 `settings` 文件夹中的全部文件，拷贝到对应开发项目的根目录中，覆盖同名文件。
+使用 `pnpm create vite` 脚手架初始化项目后，将本项目根目录下 `settings` 文件夹中的全部文件，拷贝到对应开发项目的根目录中，覆盖同名文件。
 
 ### 安装 npm 依赖
 
@@ -67,32 +67,33 @@
 ```shell
 # 以 npm 为例，使用 yarn 等其他包管理工具的请自行替换成相应命令。
 
-npm install --save-dev @babel/core@7.23
-npm install --save-dev @rushstack/eslint-patch@1.5
-npm install --save-dev @vue/eslint-config-prettier@8.0
-npm install --save-dev @vue/eslint-config-typescript@12.0
-npm install --save-dev eslint@8.51
-npm install --save-dev eslint-plugin-vue@9.17
-npm install --save-dev prettier@3.0
-npm install --save-dev tslib@latest
-npm install --save-dev typescript@latest
+pnpm install --save-dev @babel/core@7.23
+pnpm install --save-dev @rushstack/eslint-patch@1.5
+pnpm install --save-dev @vue/eslint-config-prettier@8.0
+pnpm install --save-dev @vue/eslint-config-typescript@12.0
+# eslint javascript代码检测工具
+pnpm install --save-dev eslint@8.15
+pnpm install --save-dev eslint-plugin-vue@9.17
+# prettier  代码格式化工具
+pnpm install --save-dev prettier@3.0
+pnpm install --save-dev tslib@latest
+pnpm install --save-dev typescript@latest
+pnpm install --save-dev stylelint@latest
+pnpm install --save-dev stylelint-config-standard@latest
+pnpm install --save-dev stylint-scss@latest
+pnpm install --save-dev stylelint-config-prettier@latest
+pnpm install --save-dev stylelint-order@latest
+pnpm install --save-dev typescript @vue/tsconfig
+pnpm install --save-dev @types/node
 ```
 
--   使用 Vue-CLI 的项目还需额外安装：
-
-```shell
-npm install --save-dev @vue/cli-plugin-babel@5.0
-npm install --save-dev @vue/cli-plugin-eslint@5.0
-npm install --save-dev @vue/cli-plugin-typescript@5.0
-npm install --save-dev @vue/cli-service@5.0
-```
 
 -   使用 Vite 的项目还需额外安装：
 
 ```shell
-npm install --save-dev @vue/tsconfig@latest
-npm install --save-dev vite@latest
-npm install --save-dev vue-tsc@latest
+pnpm install --save-dev @vue/tsconfig@latest
+pnpm install --save-dev vite@latest
+pnpm install --save-dev vue-tsc@latest
 ```
 
 ### 开发

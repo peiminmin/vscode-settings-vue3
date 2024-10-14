@@ -44,5 +44,6 @@ module.exports = {
             }
         ],
         '@typescript-eslint/triple-slash-reference': 'off'
-    }
+    },
+    ignores: ['dist', 'node_modules']
 };
